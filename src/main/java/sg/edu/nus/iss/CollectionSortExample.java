@@ -64,17 +64,17 @@ public class CollectionSortExample {
         employees.add(emp3);
 
         // print out unsorted employees list
-        System.out.println("Unsorted employees: " + employees);
+        // System.out.println("Unsorted employees: " + employees);
 
         // do an ascending sort using Collections
         Collections.sort(employees);
 
         // print out sorted employees list
-        System.out.println(employees);
+        // System.out.println(employees);
 
         // Sorting using Comparator and lambda
         employees.sort(Comparator.comparing(e -> e.getSalary()));
-        System.out.println("Sorted employees (salary): " + employees);
+        // System.out.println("Sorted employees (salary): " + employees);
 
         List<Employee> filteredEmployees = employees.stream().filter(e -> e.getFullName()
         .equalsIgnoreCase("darryl ng")).collect(Collectors.toList());

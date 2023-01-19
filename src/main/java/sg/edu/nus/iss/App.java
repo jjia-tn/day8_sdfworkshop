@@ -20,7 +20,10 @@ public final class App {
         // ConcurrentHashMapExample chme = new ConcurrentHashMapExample();
         // chme.example();
 
-        LinkedListExample lle = new LinkedListExample();
-        lle.example();
+        // LinkedListExample lle = new LinkedListExample();
+        // lle.example();
+
+        StackExample se = new StackExample();
+        se.example();
     }
 }
