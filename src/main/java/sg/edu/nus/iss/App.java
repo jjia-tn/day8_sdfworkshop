@@ -101,5 +101,12 @@ public final class App {
         List<Employee> employeeList = cw.generateEmployees();
         cw.writeToCSV(employeeList, dirPath + File.separator + fileEmployee);
 
+        CSVReader cr = new CSVReader();
+        List<Employee> employeeList1 = cr.readCSV(dirPath + File.separator + fileEmployee);
+
+        for (Employee employee : employeeList1) {
+            System.out.println(employee);
+        }
+
     }
 }
