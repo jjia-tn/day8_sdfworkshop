@@ -17,7 +17,10 @@ public final class App {
         // CollectionSortExample cse = new CollectionSortExample();
         // cse.example02();
 
-        ConcurrentHashMapExample chme = new ConcurrentHashMapExample();
-        chme.example();
+        // ConcurrentHashMapExample chme = new ConcurrentHashMapExample();
+        // chme.example();
+
+        LinkedListExample lle = new LinkedListExample();
+        lle.example();
     }
 }
