@@ -3,6 +3,8 @@ package sg.edu.nus.iss;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.net.FileNameMap;
+import java.util.List;
 
 /**
  * Hello world!
@@ -82,5 +84,22 @@ public final class App {
         // force data to store to the file destination
         fos.flush();
         fos.close();
+
+        String fileEmployee = "employee.txt";
+
+        // create a file in the directory created above
+        File newEmployeeFile = new File(dirPath + File.separator + fileEmployee);
+        boolean isEmployeeFileCreated = newEmployeeFile.createNewFile();
+
+        if (isEmployeeFileCreated) {
+            System.out.println("New Employee file " + fileEmployee + " created");
+        } else {
+            System.out.println("File " + fileEmployee + " already exists");
+        }
+
+        CSVWriter cw = new CSVWriter();
+        List<Employee> employeeList = cw.generateEmployees();
+        cw.writeToCSV(employeeList, dirPath + File.separator + fileEmployee);
+
     }
 }
